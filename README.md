@@ -12,3 +12,4 @@
 - **Retrieve the index of an element in the array** -> `index_of(element)`
 - **Retrieve the entire array** -> `get_array()`
 - **Retrieve the array dimension** -> `get_array_dimension()`
+- **write the entire array** -> `write_array()`
