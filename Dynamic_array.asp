@@ -65,6 +65,7 @@ array_dimension = array_dimension - 1
 Redim Preserve my_array(array_dimension)
 End Function
 
+'Function to remove an element from the array'
 Function remove_element(element)
 Dim temp_array()
 Dim temp_index
@@ -80,4 +81,27 @@ Next
 my_array = temp_array
 End Function
 
+'Funtion to check if an element is in the array'
+Function contain(element)
+Dim temp
+For Each temp In my_array
+If temp == element Then
+contain = true
+End If
+Next
+contain = false
+End Function
+
+'Function to retrieve the index of an element in the array'
+Function index_of(element)
+Dim temp_index
+temp_index = 0
+Dim temp
+For Each temp In my_array
+If temp == element Then
+index_of = temp_index
+End If
+temp_index = temp_index + 1
+Next
+End Function
 %>
