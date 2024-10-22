@@ -56,11 +56,28 @@ If indice <= array_dimension
 get_element = my_array(indice)
 Else
 get_element = Null
+End If
 End Function
 
 'Function to remove last element'
 Function remove_last()
+array_dimension = array_dimension - 1
+Redim Preserve my_array(array_dimension)
+End Function
 
+Function remove_element(element)
+Dim temp_array()
+Dim temp_index
+temp_index = 0
+Dim temp
+For Each temp In my_array
+If temp != element Then
+ReDim temp_array(temp_index)
+temp_array(temp_index) = element
+temp_index = temp_index + 1
+End If
+Next
+my_array = temp_array
 End Function
 
 %>
