@@ -1,4 +1,3 @@
-<%@LANGUAGE="VBSCRIPT"%>
 <%
 
 '------- Variable part--------'
@@ -38,10 +37,10 @@ End Function
 
 'Function to add an element'
 Function add_element(element)
-If Not array_initializated_stauts 'If the array is not initializated'
+If Not array_initializated_stauts Then 'If the array is not initializated'
 initialize_array()
 my_array(array_dimension)= element
-ElseIf array_initializated_stauts && array_dimension=0 && IsNull(my_array(array_dimension))'If the array has been initializated yet'
+ElseIf array_initializated_stauts & array_dimension = 0 Then '& IsNull(my_array(array_dimension)) Then 'If the array has been initializated yet'
 my_array(array_dimension)= element 
 Else'If ther's no special case'
 array_dimension = array_dimension + 1
@@ -52,7 +51,7 @@ End Function
 
 'Function to get an element'
 Function get_element(indice)
-If indice <= array_dimension
+If indice <= array_dimension Then
 get_element = my_array(indice)
 Else
 get_element = Null
@@ -72,7 +71,7 @@ Dim temp_index
 temp_index = 0
 Dim temp
 For Each temp In my_array
-If temp != element Then
+If temp <> element Then
 ReDim temp_array(temp_index)
 temp_array(temp_index) = element
 temp_index = temp_index + 1
@@ -85,7 +84,7 @@ End Function
 Function contain(element)
 Dim temp
 For Each temp In my_array
-If temp == element Then
+If temp = element Then
 contain = true
 End If
 Next
@@ -98,10 +97,18 @@ Dim temp_index
 temp_index = 0
 Dim temp
 For Each temp In my_array
-If temp == element Then
+If temp = element Then
 index_of = temp_index
 End If
 temp_index = temp_index + 1
+Next
+End Function
+
+'Funtion to write the entire array'
+Function write_array()
+Dim temp
+For Each temp In my_array
+Response.Write(cstr(temp) + "- ")
 Next
 End Function
 %>
