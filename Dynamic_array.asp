@@ -1,4 +1,5 @@
 <%
+<%
 
 '------- Variable part--------'
 
@@ -22,6 +23,7 @@ End Function
 Function initialize_array()
 array_dimension = 0
 ReDim my_array(array_dimension)
+my_array(array_dimension) = null
 array_initializated_stauts = true
 End Function
 
@@ -40,12 +42,14 @@ Function add_element(element)
 If Not array_initializated_stauts Then 'If the array is not initializated'
 initialize_array()
 my_array(array_dimension)= element
-ElseIf array_initializated_stauts & array_dimension = 0 Then '& IsNull(my_array(array_dimension)) Then 'If the array has been initializated yet'
+ElseIf array_initializated_stauts and array_dimension = 0 and IsNull(my_array(array_dimension)) Then 'If the array has been initializated yet'
 my_array(array_dimension)= element 
+'Response.write(" - Entrato nel caso in cui l'array ha dimensione 0 - ")
 Else'If ther's no special case'
 array_dimension = array_dimension + 1
 Redim Preserve my_array(array_dimension)
 my_array(array_dimension) = element
+'Response.write(" - Entrato nel caso in cui l'array ha dimensione maggiore di 0 - ")
 End If
 End Function
 
@@ -56,6 +60,12 @@ get_element = my_array(indice)
 Else
 get_element = Null
 End If
+End Function
+
+'Function to reset the Array'
+Function reset_array()
+Redim my_array(0)
+array_dimension = 0
 End Function
 
 'Function to remove last element'
@@ -77,7 +87,11 @@ temp_array(temp_index) = element
 temp_index = temp_index + 1
 End If
 Next
-my_array = temp_array
+'my_array = temp_array'
+reset_array()
+For Each temp In temp_array
+add_element(temp)
+Next
 End Function
 
 'Funtion to check if an element is in the array'
@@ -107,8 +121,15 @@ End Function
 'Funtion to write the entire array'
 Function write_array()
 Dim temp
+Dim temp_index
+temp_index = 0
 For Each temp In my_array
-Response.Write(cstr(temp) + "- ")
+If temp_index = array_dimension Then
+Response.Write(cstr(temp))
+Else
+Response.Write(cstr(temp) + " - ")
+End If
+temp_index = temp_index + 1
 Next
 End Function
 %>
