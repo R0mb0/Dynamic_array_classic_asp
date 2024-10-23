@@ -8,6 +8,7 @@
 - **Get element from index** -> `get_element(indice)`
 - **Remove last element from array** -> `remove_last()`
 - **Remove an element from array** -> `remove_element(element)`
+- **Reset the array** -> `reset_array()`
 - **Check if an element is in the array** -> `contain(element)`
 - **Retrieve the index of an element in the array** -> `index_of(element)`
 - **Retrieve the entire array** -> `get_array()`
