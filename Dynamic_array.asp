@@ -1,6 +1,4 @@
 <%
-<%
-
 '------- Variable part--------'
 
 'Declaration variables'
@@ -10,7 +8,7 @@ Dim array_initializated_stauts
 
 'Initialize variables'
 array_initializated_stauts = false
-array_dimension = Null
+array_dimension = null
 
 '-------- Functions part--------'
 
@@ -44,12 +42,10 @@ initialize_array()
 my_array(array_dimension)= element
 ElseIf array_initializated_stauts and array_dimension = 0 and IsNull(my_array(array_dimension)) Then 'If the array has been initializated yet'
 my_array(array_dimension)= element 
-'Response.write(" - Entrato nel caso in cui l'array ha dimensione 0 - ")
 Else'If ther's no special case'
 array_dimension = array_dimension + 1
 Redim Preserve my_array(array_dimension)
 my_array(array_dimension) = element
-'Response.write(" - Entrato nel caso in cui l'array ha dimensione maggiore di 0 - ")
 End If
 End Function
 
@@ -60,12 +56,6 @@ get_element = my_array(indice)
 Else
 get_element = Null
 End If
-End Function
-
-'Function to reset the Array'
-Function reset_array()
-Redim my_array(0)
-array_dimension = 0
 End Function
 
 'Function to remove last element'
@@ -82,13 +72,12 @@ temp_index = 0
 Dim temp
 For Each temp In my_array
 If temp <> element Then
-ReDim temp_array(temp_index)
-temp_array(temp_index) = element
+ReDim Preserve temp_array(temp_index)
+temp_array(temp_index) = temp
 temp_index = temp_index + 1
 End If
 Next
-'my_array = temp_array'
-reset_array()
+initialize_array()
 For Each temp In temp_array
 add_element(temp)
 Next
@@ -100,6 +89,7 @@ Dim temp
 For Each temp In my_array
 If temp = element Then
 contain = true
+Exit Function
 End If
 Next
 contain = false
@@ -113,6 +103,7 @@ Dim temp
 For Each temp In my_array
 If temp = element Then
 index_of = temp_index
+Exit Function
 End If
 temp_index = temp_index + 1
 Next
