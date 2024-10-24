@@ -116,9 +116,9 @@ Dim temp_index
 temp_index = 0
 For Each temp In my_array
 If temp_index = array_dimension Then
-Response.Write(cstr(temp))
+Response.Write(temp & "<br>")
 Else
-Response.Write(cstr(temp) + " - ")
+Response.Write(temp & " - ")
 End If
 temp_index = temp_index + 1
 Next
