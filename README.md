@@ -5,7 +5,7 @@
 - **Initialize the array** -> `initialize_array()`
 - **Check if the array is initializated** -> `is_array_initializated()`
 - **Add an element into the array** -> `add_element(element)`
-- **Get element from index** -> `get_element(indice)`
+- **Get element from index** -> `get_element(idx)`
 - **Remove last element from array** -> `remove_last()`
 - **Remove an element from array** -> `remove_element(element)`
 - **Reset the array** -> `initialize_array()`
