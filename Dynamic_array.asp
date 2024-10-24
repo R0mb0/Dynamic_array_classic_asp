@@ -50,9 +50,9 @@ End If
 End Function
 
 'Function to get an element'
-Function get_element(indice)
-If indice <= array_dimension Then
-get_element = my_array(indice)
+Function get_element(idx)
+If idx <= array_dimension Then
+get_element = my_array(idx)
 Else
 get_element = Null
 End If
