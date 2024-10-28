@@ -19,3 +19,23 @@
 - **Retrieve the entire array** -> `get_array()`
 - **Retrieve the array dimension** -> `get_array_dimension()`
 - **Write the entire array** -> `write_array()`
+
+## How to use: 
+
+> From `Test1.asp`
+
+1. Initialize the array and check it's status
+   ```
+   initialize_array()
+   Response.Write("Array status: ")
+   Response.Write(is_array_initializated() & "<br>")
+   ```
+2. Use the functions to manage the array
+   ```
+   add_element_to_array("A")
+   add_element_to_array("B")
+   add_element_to_array("C")
+   add_element_to_array("D")
+   Response.Write("Elements inside: ")
+   write_array()
+   ```
