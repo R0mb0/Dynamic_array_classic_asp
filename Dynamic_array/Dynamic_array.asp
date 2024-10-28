@@ -36,7 +36,7 @@ get_array=my_array
 End Function
 
 'Function to add an element'
-Function add_element(element)
+Function add_element_to_array(element)
 If Not array_initializated_stauts Then 'If the array is not initializated'
 initialize_array()
 my_array(array_dimension)= element
@@ -50,22 +50,25 @@ End If
 End Function
 
 'Function to get an element'
-Function get_element(idx)
+Function get_element_from_array(idx)
 If idx <= array_dimension Then
-get_element = my_array(idx)
+get_element_from_array = my_array(idx)
 Else
-get_element = Null
+get_element_from_array = Null
 End If
 End Function
 
 'Function to remove last element'
-Function remove_last()
+Function remove_last_element_from_array()
 array_dimension = array_dimension - 1
+If array_dimension >= 0 Then
 Redim Preserve my_array(array_dimension)
+End If
 End Function
 
 'Function to remove an element from the array'
-Function remove_element(element)
+Function remove_element_from_array(element)
+If array_contains(element) Then
 Dim temp_array()
 Dim temp_index
 temp_index = 0
@@ -79,30 +82,31 @@ End If
 Next
 initialize_array()
 For Each temp In temp_array
-add_element(temp)
+add_element_to_array(temp)
 Next
+End If
 End Function
 
 'Funtion to check if an element is in the array'
-Function contain(element)
+Function array_contains(element)
 Dim temp
 For Each temp In my_array
 If temp = element Then
-contain = true
+array_contains = true
 Exit Function
 End If
 Next
-contain = false
+array_contains = false
 End Function
 
 'Function to retrieve the index of an element in the array'
-Function index_of(element)
+Function from_array_get_index_of(element)
 Dim temp_index
 temp_index = 0
 Dim temp
 For Each temp In my_array
 If temp = element Then
-index_of = temp_index
+from_array_get_index_of = temp_index
 Exit Function
 End If
 temp_index = temp_index + 1

@@ -5,10 +5,10 @@ Response.Write("--- Starting test --- <br>")
 
 Response.Write("--- Add elements without initialize the array --- <br>")
 
-add_element("A")
-add_element("B")
-add_element("C")
-add_element("D")
+add_element_to_array("A")
+add_element_to_array("B")
+add_element_to_array("C")
+add_element_to_array("D")
 Response.Write("Elements inside: ")
 write_array()
 
@@ -18,27 +18,27 @@ Response.Write(is_array_initializated() & "<br>")
 Response.Write("--- Get element with 1 --- <br>")
 
 Response.Write("Element: ")
-Response.Write(get_element(1) & "<br>")
+Response.Write(get_element_from_array(1) & "<br>")
 
 Response.Write("--- Remove last element --- <br>")
 
-remove_last()
+remove_last_element_from_array()
 Response.Write("Elements: ")
 write_array()
 
 Response.Write("--- Remove B from array --- <br>")
 
-remove_element("B")
+remove_element_from_array("B")
 Response.Write("Elements: ")
 write_array()
 
 Response.Write("--- Check if A is into array --- <br>")
 
 Response.Write("Is A present? : ")
-Response.Write(contain("A") & "<br>")
+Response.Write(array_contains("A") & "<br>")
 
 Response.Write("--- Check index of C --- <br>")
 
 Response.Write("Index of C: ")
-Response.Write(index_of("C"))
+Response.Write(from_array_get_index_of("C"))
 %>

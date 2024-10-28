@@ -9,13 +9,13 @@
 
 - **Initialize the array** -> `initialize_array()`
 - **Check if the array is initializated** -> `is_array_initializated()`
-- **Add an element into the array** -> `add_element(element)`
-- **Get element from index** -> `get_element(idx)`
-- **Remove last element from array** -> `remove_last()`
-- **Remove an element from array** -> `remove_element(element)`
+- **Add an element into the array** -> `add_element_to_array(element)`
+- **Get element from index** -> `get_element_from_array(idx)`
+- **Remove last element from array** -> `remove_last_element_from_array()`
+- **Remove an element from array** -> `remove_element_from_array(element)`
 - **Reset the array** -> `initialize_array()`
-- **Check if an element is in the array** -> `contain(element)`
-- **Retrieve the index of an element in the array** -> `index_of(element)`
+- **Check if an element is in the array** -> `array_contains(element)`
+- **Retrieve the index of an element in the array** -> `from_array_get_index_of(element)`
 - **Retrieve the entire array** -> `get_array()`
 - **Retrieve the array dimension** -> `get_array_dimension()`
 - **Write the entire array** -> `write_array()`
