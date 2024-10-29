@@ -66,7 +66,7 @@ Redim Preserve my_array(array_dimension)
 End If
 End Function
 
-'Function to remove all element occurence from the array'
+'Function to remove all element occurences from the array'
 Function remove_all_occurences_from_array(element)
 If array_contains(element) Then
 Dim temp_array()
@@ -75,6 +75,61 @@ temp_index = 0
 Dim temp
 For Each temp In my_array
 If temp <> element Then
+ReDim Preserve temp_array(temp_index)
+temp_array(temp_index) = temp
+temp_index = temp_index + 1
+End If
+Next
+initialize_array()
+For Each temp In temp_array
+add_element_to_array(temp)
+Next
+End If
+End Function
+
+'Function to remove first element occurence from the array'
+Function remove_first_occurence_from_array(element)
+If array_contains(element) Then
+Dim temp_array()
+Dim temp_index
+temp_index = 0
+Dim first
+first = false
+Dim temp
+For Each temp In my_array
+If temp <> element Then
+ReDim Preserve temp_array(temp_index)
+temp_array(temp_index) = temp
+temp_index = temp_index + 1
+Else
+If temp = element and Not first
+first = true
+ReDim Preserve temp_array(temp_index)
+temp_array(temp_index) = temp
+temp_index = temp_index + 1
+End If
+Next
+initialize_array()
+For Each temp In temp_array
+add_element_to_array(temp)
+Next
+End If
+End Function
+
+'Function to remove these element occurence from the array'
+Function remove_these_elements_from_array(indexes_array)
+Dim my_index
+For Each my_index In indexes_array
+If my_index > 0 and my_index <= array_dimension Then
+my_array(my_index) = Null
+End If
+Next
+Dim temp
+Dim temp_array()
+Dim temp_index
+temp_index = 0
+For Each temp In my_array
+If temp <> Null Then
 ReDim Preserve temp_array(temp_index)
 temp_array(temp_index) = temp
 temp_index = temp_index + 1
@@ -100,17 +155,40 @@ array_contains = false
 End Function
 
 'Function to retrieve the index of an element in the array'
-Function from_array_get_index_of(element)
+Function from_array_get_first_index_occurence_of(element)
+If array_contains(element) Then
 Dim temp_index
 temp_index = 0
 Dim temp
 For Each temp In my_array
 If temp = element Then
-from_array_get_index_of = temp_index
+from_array_get_first_index_occurence_of = temp_index
 Exit Function
 End If
 temp_index = temp_index + 1
 Next
+End If
+End Function
+
+'Function to retrieve all indeces of an element in the array'
+Function from_array_get_all_indeces_occurence_of(element)
+If array_contains(element) Then
+Dim temp_array()
+Dim temp_array_index
+temp_array_index = 0
+Dim temp_index
+temp_index = 0
+Dim temp
+For Each temp In my_array
+If temp = element Then
+ReDim temp_array(temp_array_index)
+temp_array(temp_array_index) = temp_index
+temp_array_index = temp_array_index + 1
+End If
+temp_index = temp_index + 1
+Next
+from_array_get_all_indeces_occurence_of = temp_array
+End If
 End Function
 
 'Funtion to write the entire array'
