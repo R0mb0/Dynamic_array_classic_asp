@@ -66,8 +66,8 @@ Redim Preserve my_array(array_dimension)
 End If
 End Function
 
-'Function to remove an element from the array'
-Function remove_element_from_array(element)
+'Function to remove all element occurence from the array'
+Function remove_all_occurences_from_array(element)
 If array_contains(element) Then
 Dim temp_array()
 Dim temp_index

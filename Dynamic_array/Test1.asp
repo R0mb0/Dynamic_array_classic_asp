@@ -31,7 +31,7 @@ write_array()
 
 Response.Write("--- Remove B from array --- <br>")
 
-remove_element_from_array("B")
+remove_all_occurences_from_array("B")
 Response.Write("Elements: ")
 write_array()
 
