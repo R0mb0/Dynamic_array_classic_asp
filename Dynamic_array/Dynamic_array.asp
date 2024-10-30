@@ -94,7 +94,7 @@ Dim temp_array()
 Dim temp_index
 temp_index = 0
 Dim first
-first = false
+first = true
 Dim temp
 For Each temp In my_array
 If temp <> element Then
@@ -102,11 +102,13 @@ ReDim Preserve temp_array(temp_index)
 temp_array(temp_index) = temp
 temp_index = temp_index + 1
 Else
-If temp = element and Not first
-first = true
+If temp = element and first Then
+first = false
+Else
 ReDim Preserve temp_array(temp_index)
 temp_array(temp_index) = temp
 temp_index = temp_index + 1
+End If
 End If
 Next
 initialize_array()
@@ -129,7 +131,7 @@ Dim temp_array()
 Dim temp_index
 temp_index = 0
 For Each temp In my_array
-If temp <> Null Then
+If Not IsNull(temp) Then
 ReDim Preserve temp_array(temp_index)
 temp_array(temp_index) = temp
 temp_index = temp_index + 1
@@ -139,7 +141,6 @@ initialize_array()
 For Each temp In temp_array
 add_element_to_array(temp)
 Next
-End If
 End Function
 
 'Funtion to check if an element is in the array'
@@ -181,7 +182,7 @@ temp_index = 0
 Dim temp
 For Each temp In my_array
 If temp = element Then
-ReDim temp_array(temp_array_index)
+ReDim Preserve temp_array(temp_array_index)
 temp_array(temp_array_index) = temp_index
 temp_array_index = temp_array_index + 1
 End If
