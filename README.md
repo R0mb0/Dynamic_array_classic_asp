@@ -13,9 +13,12 @@
 - **Get element from index** -> `get_element_from_array(idx)`
 - **Remove last element from array** -> `remove_last_element_from_array()`
 - **Remove an element from array** -> `remove_all_occurences_from_array(element)`
+- **Remove the first element occurence from array** -> `remove_first_occurence_from_array(element)`
+- **Remove elements from indices** -> `remove_these_elements_from_array(indexes_array)`
 - **Reset the array** -> `initialize_array()`
 - **Check if an element is in the array** -> `array_contains(element)`
-- **Retrieve the index of an element in the array** -> `from_array_get_index_of(element)`
+- **Retrieve the first index of an element in the array** -> `from_array_get_first_index_occurence_of(element)`
+- **Retrieve all indeces of an element in the array (return an array)** -> `from_array_get_all_indeces_occurence_of(element)`
 - **Retrieve the entire array** -> `get_array()`
 - **Retrieve the array dimension** -> `get_array_dimension()`
 - **Write the entire array** -> `write_array()`
