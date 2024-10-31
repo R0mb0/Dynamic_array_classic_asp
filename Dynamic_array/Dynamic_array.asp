@@ -155,7 +155,7 @@ Next
 array_contains = false
 End Function
 
-'Function to retrieve the index of an element in the array'
+'Function to retrieve the first index of an element in the array'
 Function from_array_get_first_index_occurence_of(element)
 If array_contains(element) Then
 Dim temp_index
@@ -171,7 +171,7 @@ Next
 End If
 End Function
 
-'Function to retrieve all indeces of an element in the array'
+'Function to retrieve all indeces of an element inside the array'
 Function from_array_get_all_indeces_occurence_of(element)
 If array_contains(element) Then
 Dim temp_array()
