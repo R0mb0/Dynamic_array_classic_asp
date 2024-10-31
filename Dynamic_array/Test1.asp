@@ -88,4 +88,11 @@ Dim temp
 For Each temp In from_array_get_all_indeces_occurence_of("A")
 Response.Write(temp & " - ")
 Next
+
+Response.Write("<br>")
+Response.Write("--- Remove element from posiction: 1 --- <br>")
+
+remove_this_element_from_array(1)
+Response.Write("Elements: ")
+write_array()
 %>

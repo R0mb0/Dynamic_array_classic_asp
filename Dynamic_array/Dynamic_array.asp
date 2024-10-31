@@ -118,10 +118,32 @@ Next
 End If
 End Function
 
+'Function to remove this element occurence from the array'
+Function remove_this_element_from_array(idx)
+If idx > 0 and idx <= array_dimension Then
+my_array(my_index) = Null
+End If
+Dim temp
+Dim temp_array()
+Dim temp_index
+temp_index = 0
+For Each temp In my_array
+If Not IsNull(temp) Then
+ReDim Preserve temp_array(temp_index)
+temp_array(temp_index) = temp
+temp_index = temp_index + 1
+End If
+Next
+initialize_array()
+For Each temp In temp_array
+add_element_to_array(temp)
+Next
+End Function
+
 'Function to remove these element occurence from the array'
-Function remove_these_elements_from_array(indexes_array)
+Function remove_these_elements_from_array(indices_array)
 Dim my_index
-For Each my_index In indexes_array
+For Each my_index In indices_array
 If my_index > 0 and my_index <= array_dimension Then
 my_array(my_index) = Null
 End If
@@ -155,7 +177,7 @@ Next
 array_contains = false
 End Function
 
-'Function to retrieve the first index of an element in the array'
+'Function to retrieve the index of an element in the array'
 Function from_array_get_first_index_occurence_of(element)
 If array_contains(element) Then
 Dim temp_index
@@ -171,7 +193,7 @@ Next
 End If
 End Function
 
-'Function to retrieve all indeces of an element inside the array'
+'Function to retrieve all indeces of an element in the array'
 Function from_array_get_all_indeces_occurence_of(element)
 If array_contains(element) Then
 Dim temp_array()
