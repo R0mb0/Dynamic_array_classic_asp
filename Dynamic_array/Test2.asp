@@ -61,7 +61,7 @@ Response.Write("--- Check if C is into array --- <br>")
 Response.Write("Is C present? : ")
 Response.Write(array_contains("C") & "<br>")
 
-Response.Write("--- Add other elements in array --- <br>")
+Response.Write("--- Add other elements into array --- <br>")
 
 add_element_to_array("B")
 add_element_to_array("C")
