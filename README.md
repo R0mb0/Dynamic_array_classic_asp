@@ -18,7 +18,7 @@
 - **Reset the array** -> `initialize_array()`
 - **Check if an element is in the array** -> `array_contains(element)`
 - **Retrieve the first index of an element in the array** -> `from_array_get_first_index_occurence_of(element)`
-- **Retrieve all indeces of an element in the array (return an array)** -> `from_array_get_all_indeces_occurence_of(element)`
+- **Retrieve all indeces of an element inside the array (return an array)** -> `from_array_get_all_indeces_occurence_of(element)`
 - **Retrieve the entire array** -> `get_array()`
 - **Retrieve the array dimension** -> `get_array_dimension()`
 - **Write the entire array** -> `write_array()`
