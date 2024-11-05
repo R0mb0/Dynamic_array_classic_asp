@@ -30,6 +30,9 @@
 
 1. Initialize the array and check it's status
    ```
+   <%@LANGUAGE="VBSCRIPT"%>
+   <!--#include file="Dynamic_array.asp"-->
+   <%
    initialize_array()
    Response.Write("Array status: ")
    Response.Write(is_array_initializated() & "<br>")
@@ -42,4 +45,5 @@
    add_element_to_array("D")
    Response.Write("Elements inside: ")
    write_array()
+   %>
    ```
