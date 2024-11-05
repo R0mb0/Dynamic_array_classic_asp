@@ -14,7 +14,8 @@
 - **Remove last element from array** -> `remove_last_element_from_array()`
 - **Remove an element from array** -> `remove_all_occurences_from_array(element)`
 - **Remove the first element occurence from array** -> `remove_first_occurence_from_array(element)`
-- **Remove elements from indices** -> `remove_these_elements_from_array(indexes_array)`
+- **Remove element from index** -> `remove_this_elements_from_array(idx)`
+- **Remove elements from indices** -> `remove_these_elements_from_array(indices_array)`
 - **Reset the array** -> `initialize_array()`
 - **Check if an element is in the array** -> `array_contains(element)`
 - **Retrieve the first index of an element in the array** -> `from_array_get_first_index_occurence_of(element)`
@@ -29,6 +30,9 @@
 
 1. Initialize the array and check it's status
    ```
+   <%@LANGUAGE="VBSCRIPT"%>
+   <!--#include file="Dynamic_array.asp"-->
+   <%
    initialize_array()
    Response.Write("Array status: ")
    Response.Write(is_array_initializated() & "<br>")
@@ -41,4 +45,5 @@
    add_element_to_array("D")
    Response.Write("Elements inside: ")
    write_array()
+   %>
    ```
