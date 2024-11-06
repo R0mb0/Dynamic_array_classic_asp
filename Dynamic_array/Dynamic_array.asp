@@ -116,15 +116,15 @@ Dim temp
 Dim temp_array()
 Dim temp_index
 temp_index = 0
-For Each temp in my_array
-If Not temp_index = last_index_searched Then 
-Redim Preserve temp_array(temp_index)
-temp_array = temp
-temp_index = temp_index + 1 
-Next
-initialize_array()
-For Each temp In temp_array
-add_element_to_array(temp)
+Dim temp_array_index
+temp_array_index = 0
+For Each temp In my_array
+If temp_index <> last_index_searched Then 
+Redim Preserve temp_array(temp_array_index)
+temp_array(temp_array_index) = temp
+temp_array_index = temp_array_index + 1 
+End If
+temp_index = temp_index + 1
 Next
 initialize_array()
 For Each temp In temp_array
