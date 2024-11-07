@@ -56,7 +56,7 @@ Function get_element_from_array(idx)
 If idx => 0 and idx <= array_dimension Then
 get_element_from_array = my_array(idx)
 Else
-Call Err.Raise(vbObjectError + 10, "Dynamic_array - get_element_from_array", "Index error")
+Call Err.Raise(vbObjectError + 10, "Dynamic_array - get_element_from_array", "Index error: "&idx&"")
 End If
 End Function
 
@@ -105,7 +105,7 @@ For Each temp In temp_array
 add_element_to_array(temp)
 Next
 Else
-Call Err.Raise(vbObjectError + 10, "Dynamic_array - remove_all_occurences_from_array", "The element is not present")
+Call Err.Raise(vbObjectError + 10, "Dynamic_array - remove_all_occurences_from_array", "The element "&element&" is not present")
 End If
 End Function
 
@@ -131,7 +131,7 @@ For Each temp In temp_array
 add_element_to_array(temp)
 Next
 Else
-Call Err.Raise(vbObjectError + 10, "Dynamic_array - remove_first_occurence_from_array", "The element is not present")
+Call Err.Raise(vbObjectError + 10, "Dynamic_array - remove_first_occurence_from_array", "The element "&element&" is not present")
 End If
 End Function
 
@@ -155,7 +155,7 @@ For Each temp In temp_array
 add_element_to_array(temp)
 Next
 Else
-Call Err.Raise(vbObjectError + 10, "Dynamic_array - remove_this_element_from_array", "Index error")
+Call Err.Raise(vbObjectError + 10, "Dynamic_array - remove_this_element_from_array", "Index error: "&idx&"")
 End If
 End Function
 
@@ -166,7 +166,7 @@ For Each my_index In indices_array
 If my_index >= 0 and my_index <= array_dimension Then
 my_array(my_index) = Null
 Else
-Call Err.Raise(vbObjectError + 10, "Dynamic_array - remove_these_elements_from_array", "Index error")
+Call Err.Raise(vbObjectError + 10, "Dynamic_array - remove_these_elements_from_array", "Index error: "&my_index&"")
 End If
 Next
 Dim temp
@@ -191,7 +191,7 @@ Function from_array_get_first_index_occurence_of(element)
 If array_contains(element) Then
 from_array_get_first_index_occurence_of = last_index_searched
 Else
-Call Err.Raise(vbObjectError + 10, "Dynamic_array - from_array_get_first_index_occurence_of", "The element is not present")
+Call Err.Raise(vbObjectError + 10, "Dynamic_array - from_array_get_first_index_occurence_of", "The element "&element&" is not present")
 End If
 End Function
 
@@ -214,7 +214,7 @@ temp_index = temp_index + 1
 Next
 from_array_get_all_indeces_occurence_of = temp_array
 Else
-Call Err.Raise(vbObjectError + 10, "Dynamic_array - from_array_get_all_indeces_occurence_of", "The element is not present")
+Call Err.Raise(vbObjectError + 10, "Dynamic_array - from_array_get_all_indeces_occurence_of", "The element "&element&" is not present")
 End If
 End Function
 
