@@ -80,7 +80,7 @@ Response.Write("--- Check indices of A --- <br>")
 Response.Write("Indices of A: ")
 Dim temp
 For Each temp In from_array_get_all_indeces_occurence_of("A")
-Response.Write(temp & " - ")
+    Response.Write(temp & " - ")
 Next
 
 Response.Write("<br>")
