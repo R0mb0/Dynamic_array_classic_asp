@@ -13,9 +13,9 @@ class dArray
 	end sub
 	
 	sub class_terminate()
-		Redim my_array(0)
-        array_dimension = 0
-        array_initializated_stauts = false
+		Redim my_array(-1)
+        array_dimension = Nothing
+        array_initializated_stauts = Nothing
 	end sub
 
     'Funtion to get array status'
