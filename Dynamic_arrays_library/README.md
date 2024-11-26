@@ -5,6 +5,7 @@
 - **Initialize a dynamic array** -> `get_initializated_dynamic_array()`
 - **Add an element into a dynamic array** -> `add_element_to_dynamic_array(my_array,element)`
 - **Get element from index** -> `get_element_from_dynamic_array(my_array,idx)`
+- **Get array dimension** -> `get_dynamic_array_dimension(my_array my_array)`
 - **Remove last element from a dynamic array** -> `remove_last_element_from_dynamic_array(my_array)`
 - **Remove all element occurences from a dyamic array** -> `remove_all_occurences_from_dynamic_array(my_array,element)`
 - **Remove first element occurence from a dynamic array** -> `remove_first_occurence_from_dynamic_array(my_array,element)`
