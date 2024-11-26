@@ -1,4 +1,4 @@
-# Dynamic arrays in Classic ASP library
+# Dynamic arrays library in Classic ASP
 
 ## `Dynamic_arrays.asp`'s avaible Functions
 
