@@ -7,7 +7,7 @@ class dArray
 
     Dim last_index_searched
 
-    ' Initialization and destruction
+    ' Initialization and destruction'
 	sub class_initialize()
 		initialize()
 	end sub
@@ -17,11 +17,6 @@ class dArray
         array_dimension = Nothing
         array_initializated_stauts = Nothing
 	end sub
-
-    'Funtion to get array status'
-    Public Function is_initializated()
-        is_initializated = array_initializated_stauts
-    End Function
 
     'Function to initialize the array'
     Private Sub initialize()
