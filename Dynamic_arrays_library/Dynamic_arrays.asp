@@ -207,12 +207,12 @@ Function from_dynamic_array_get_all_indeces_occurence_of(ByRef my_array,ByVal el
 End Function
 
 'Function to retrieve dynamic array dimension'
-Function get_dynamic_array_dimension(my_array my_array)
+Function get_dynamic_array_dimension(ByRef my_array)
   get_dynamic_array_dimension = UBound(my_array)
 End Function
 
 'Funtion to write the entire array'
-Function write_dynamic_array(my_array my_array)
+Function write_dynamic_array(ByRef my_array)
   Dim temp
   Dim temp_index
   temp_index = 0
