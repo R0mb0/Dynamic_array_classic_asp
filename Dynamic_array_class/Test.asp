@@ -7,8 +7,6 @@ Response.Write("--- Initialize and test array status --- <br>")
 
 Dim da 
 Set da = new dArray 
-Response.Write("Array status: ")
-Response.Write(da.is_initializated() & "<br>")
 
 Response.Write("--- Add elements into array and ckeck status --- <br>")
 
