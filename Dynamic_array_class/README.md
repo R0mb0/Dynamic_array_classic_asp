@@ -12,7 +12,7 @@
 - **Remove first element occurence** -> `Public Function remove_first_occurence(element)`
 - **Remove element from index** -> `Public Function remove_this_element(idx)`
 - **Remove elements from indices** -> `Public Function remove_these_elements(indices_array)`
-- **Reset** -> Re-initialize the class
+- **Reset** -> Re-initialize the object
 - **Check if an element is present** -> ` Public Function contains(element)`
 - **Retrieve the first index of an element** -> `Public Function get_first_index_occurence_of(element)`
 - **Retrieve all indeces of an element (return an array)** -> `Public Function get_all_indeces_occurence_of(element)`
