@@ -22,6 +22,9 @@ da.add_element("A")
 Response.Write("Elements inside: ")
 da.write_array()
 
+Response.Write("--- Get array dimension --- <br>")
+Response.write("Array dimension: " & da.get_dimension() & "<br>")
+
 Response.Write("--- Get element with index 1 --- <br>")
 
 Response.Write("Element: ")

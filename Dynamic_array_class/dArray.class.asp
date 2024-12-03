@@ -28,7 +28,7 @@ class dArray
 
     'Funtion to get array dimension'
     Public Function get_dimension()
-        get_dimension = array_dimension
+        get_dimension = array_dimension + 1
     End Function
 
     'Funtion to get the entire array'
