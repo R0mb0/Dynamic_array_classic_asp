@@ -208,7 +208,7 @@ End Function
 
 'Function to retrieve dynamic array dimension'
 Function get_dynamic_array_dimension(ByRef my_array)
-  get_dynamic_array_dimension = UBound(my_array)
+  get_dynamic_array_dimension = UBound(my_array) + 1
 End Function
 
 'Funtion to write the entire array'

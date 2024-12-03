@@ -24,6 +24,9 @@ add_element_to_dynamic_array test_array,"A"
 Response.Write("Elements inside: ")
 write_dynamic_array(test_array)
 
+Response.Write("--- Get array dimension --- <br>")
+Response.write("Array dimension: " & get_dynamic_array_dimension(test_array) & "<br>")
+
 Response.Write("--- Get element with index 1 --- <br>")
 
 Response.Write("Element: ")
