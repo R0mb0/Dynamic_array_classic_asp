@@ -17,6 +17,9 @@ add_element_to_array("A")
 Response.Write("Elements inside: ")
 write_array()
 
+Response.Write("--- Get array dimension --- <br>")
+Response.write("Array dimension: " & get_array_dimension() & "<br>")
+
 Response.Write("--- Get element with index 1 --- <br>")
 
 Response.Write("Element: ")

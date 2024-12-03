@@ -29,7 +29,7 @@ End Function
 
 'Funtion to get array dimension'
 Function get_array_dimension()
-    get_array_dimension = array_dimension
+    get_array_dimension = array_dimension + 1
 End Function
 
 'Funtion to get the entire array'
