@@ -38,7 +38,7 @@
 > From `Test1.asp`
 
 1. Initialize the array and check it's status
-   ```
+   ```asp
    <%@LANGUAGE="VBSCRIPT"%>
    <!--#include file="Dynamic_array.asp"-->
    <%
@@ -47,7 +47,7 @@
    Response.Write(is_array_initializated() & "<br>")
    ```
 2. Use the functions to manage the array
-   ```
+   ```asp
    add_element_to_array("A")
    add_element_to_array("B")
    add_element_to_array("C")
@@ -86,7 +86,7 @@
 > From `Test.asp`
 
 1. Create array and initialize it
-   ```
+   ```asp
    <%@LANGUAGE="VBSCRIPT"%>
    <!--#include file="Dynamic_arrays.asp"-->
    <%
@@ -95,7 +95,7 @@
    test_array = get_initializated_dynamic_array()
    ```
 2. Pass the array to functions for manage
-   ```
+   ```asp
    add_element_to_dynamic_array test_array,"A"
    add_element_to_dynamic_array test_array,"B"
    add_element_to_dynamic_array test_array,"C"
@@ -133,7 +133,7 @@
 > From `Test.asp`
 
 1. Initialize the class
-  ```
+  ```asp
   <%@LANGUAGE="VBSCRIPT"%>
   <!--#include file="dArray.class.asp"-->
   <%
@@ -141,7 +141,7 @@
       Set da = new dArray
   ```
 2. Use the class
-  ```
+  ```asp
   da.add_element("A")
   da.add_element("B")
   da.add_element("C")
