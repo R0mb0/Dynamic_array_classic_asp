@@ -12,9 +12,9 @@
 <details>
   <summary> 
 
-  ## `Dynamic_array.asp`'s avaible Functions
+## `Dynamic_array.asp`'s avaible Functions
   
-  </summary>
+</summary>
 
 - **Initialize the array** -> `initialize_array()`
 - **Check if the array is initializated** -> `is_array_initializated()`
@@ -33,7 +33,7 @@
 - **Retrieve the array dimension** -> `get_array_dimension()`
 - **Write the entire array** -> `write_array()`
 
-## How to use: 
+## How to use 
 
 > From `Test1.asp`
 
@@ -57,14 +57,14 @@
    %>
    ```
 
-   </details>
+</details>
 
-   <details>
+<details>
   <summary> 
 
-   ## `Dynamic_arrays.asp`'s avaible Functions
+## `Dynamic_arrays.asp`'s avaible Functions
   
-  </summary>
+</summary>
 
 - **Initialize a dynamic array** -> `get_initializated_dynamic_array()`
 - **Add an element into a dynamic array** -> `add_element_to_dynamic_array(my_array,element)`
@@ -81,7 +81,7 @@
 - **Retrieve the dynamic array dimension** -> `get_dynamic_array_dimension(my_array)`
 - **Write an entire dynamic array** -> `write_dynamic_array(my_array)`
 
-## How to use: 
+## How to use 
 
 > From `Test.asp`
 
@@ -103,14 +103,14 @@
    %>
    ```
 
-   </details>
+</details>
 
-   <details>
+<details>
   <summary> 
 
-  ## `dArray.class.asp`'s avaible Functions
+## `dArray.class.asp`'s avaible Functions
   
-  </summary>
+</summary>
 
 - **Initialize class** -> `sub class_initialize()`
 - **Terminate class** -> `sub class_terminate()`
@@ -123,12 +123,12 @@
 - **Remove element from index** -> `Public Function remove_this_element(idx)`
 - **Remove elements from indices** -> `Public Function remove_these_elements(indices_array)`
 - **Reset** -> Re-initialize the class
-- **Check if an element is present** -> ` Public Function contains(element)`
+- **Check if an element is present** -> `Public Function contains(element)`
 - **Retrieve the first index of an element** -> `Public Function get_first_index_occurence_of(element)`
 - **Retrieve all indeces of an element (return an array)** -> `Public Function get_all_indeces_occurence_of(element)`
-- **Write the entire array** -> ` Public Function write_array()`
+- **Write the entire array** -> `Public Function write_array()`
 
-## How to use: 
+## How to use 
 
 > From `Test.asp`
 
